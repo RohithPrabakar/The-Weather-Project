@@ -5,8 +5,9 @@ require('dotenv').config();
 
 const app = express();
 
-app.listen(3000, () => {
-    console.log('lisiting 3000');
+const port = process.env.port || 300;
+app.listen(port, () => {
+    console.log(`listening to ${port}`);
 })
 
 const database = new Datastore('database.db');
